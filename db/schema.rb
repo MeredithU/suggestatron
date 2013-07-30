@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730172340) do
+ActiveRecord::Schema.define(:version => 20130730224933) do
 
   create_table "deals", :force => true do |t|
     t.string   "localdeal"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130730172340) do
     t.string   "forecast"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "trip_id"
   end
 
 end
