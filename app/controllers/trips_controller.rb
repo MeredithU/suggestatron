@@ -7,7 +7,6 @@ class TripsController < ApplicationController
 
   def create
 
-
   end
 
 

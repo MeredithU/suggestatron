@@ -2,7 +2,7 @@ class Mapping < ActiveRecord::Base
 
   attr_accessible :location
 
-  has_many :trips
+  belongs_to :trips
 
   acts_as_gmappable
 

@@ -2,7 +2,7 @@ class Deal < ActiveRecord::Base
 
   attr_accessible :localdeal
 
-  has_many :trips
+  belongs_to :trips
 
   include HTTParty
   require 'open-uri'

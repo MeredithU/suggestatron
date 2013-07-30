@@ -1,6 +1,6 @@
 class Trip < ActiveRecord::Base
-  belongs_to :weather
-  belongs_to :deal
-  belongs_to :mapping
+  has_one :weather
+  has_one :deal
+  has_one :mapping
   attr_accessible :endzipcode, :startzipcode
 end

@@ -2,7 +2,7 @@ class Weather < ActiveRecord::Base
 
   attr_accessible :forecast, :temperature
 
-  has_many :trips
+  belongs_to :trips
 
   def get_zip_weather
     HTTParty.get("http://api.wunderground.com/api/80c09000360316c5/geolookup/conditions/q/#{endzipcode}.json")
