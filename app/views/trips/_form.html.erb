@@ -1,0 +1,15 @@
+<%= form_for(@trip) do |f| %>
+
+  <p>
+    <%= f.label :startzipcode %>
+    <%= f.text_field :startzipcode %>
+  </p>
+
+  <p>
+    <%= f.label :endzipcode %>
+    <%= f.text_field :endzipcode %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

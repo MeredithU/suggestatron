@@ -2,6 +2,8 @@ class Deal < ActiveRecord::Base
 
   attr_accessible :localdeal
 
+  has_many :trips
+
   include HTTParty
   require 'open-uri'
   require 'json'
