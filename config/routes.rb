@@ -1,8 +1,13 @@
 Suggestatron::Application.routes.draw do
 
+  devise_for :users
+
   root :to => "trips#index"
 
   resources :trips
+
+
+
 
 
   # The priority is based upon order of creation:
