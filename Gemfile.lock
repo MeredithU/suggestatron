@@ -169,7 +169,7 @@ DEPENDENCIES
   devise (= 2.1.0)
   email_spec (= 1.2.1)
   factory_girl (= 2.6.4)
-  gmaps4rails (~> 1.5.6)
+  gmaps4rails
   httparty
   jquery-rails
   rails (= 3.2.13)

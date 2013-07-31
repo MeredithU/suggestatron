@@ -1,12 +1,12 @@
 class Mapping < ActiveRecord::Base
 
-  attr_accessible :location, :trip_id
+  attr_accessible :location, :trip_id, :longitude, :latitude, :gmaps
 
   belongs_to :trip
 
   acts_as_gmappable
 
   def gmaps4rails_address
-    "#{endzipcode}"
+    self.location = "#{trip.endzipcode}"
   end
 end
