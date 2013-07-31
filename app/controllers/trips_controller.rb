@@ -12,6 +12,10 @@ class TripsController < ApplicationController
       @weather = @trip.create_weather
       @weather.get_weather_data
 
+      # Call eight coupons API
+      @deal = @trip.create_deal
+      @deal.get_deal_data
+
       flash[:notice] = "Trip has been created."
       render :action => "show"
     else

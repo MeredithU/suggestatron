@@ -11,13 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731000807) do
+ActiveRecord::Schema.define(:version => 20130731002534) do
 
   create_table "deals", :force => true do |t|
     t.string   "localdeal"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "trip_id"
+    t.string   "dealtitle"
+    t.string   "dealname"
+    t.string   "dealaddress"
+    t.string   "dealcity"
   end
 
   create_table "mappings", :force => true do |t|
