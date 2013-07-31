@@ -32,11 +32,10 @@ feature 'Creating Trip' do
     #find("title").should have_content(title)
   end
 
-  scenario "can not create a trip without a zip code" do
-    page.should have_content("Trip has not been created.")
-    page.should have_content("Zip code can't be blank")
-#    within("#trip #author") do
-#      page.should have_content("Created by user@suggestatron.com")
-#    end
-  end
+
+  #scenario "can not create a trip without a zip code" do
+  #  page.should have_content("Trip has not been created.")
+  #  page.should have_content("Zip code can't be blank")
+  #end
+
 end

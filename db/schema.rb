@@ -11,35 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730205812) do
+
+ActiveRecord::Schema.define(:version => 20130731002534) do
 
   create_table "deals", :force => true do |t|
     t.string   "localdeal"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "trip_id"
+    t.string   "dealtitle"
+    t.string   "dealname"
+    t.string   "dealaddress"
+    t.string   "dealcity"
   end
 
   create_table "mappings", :force => true do |t|
     t.string   "location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "trip_id"
   end
 
   create_table "trips", :force => true do |t|
     t.string   "startzipcode"
     t.string   "endzipcode"
-    t.integer  "weather_id"
-    t.integer  "deal_id"
-    t.integer  "mapping_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "user_id"
   end
 
-  add_index "trips", ["deal_id"], :name => "index_trips_on_deal_id"
-  add_index "trips", ["mapping_id"], :name => "index_trips_on_mapping_id"
   add_index "trips", ["user_id"], :name => "index_trips_on_user_id"
-  add_index "trips", ["weather_id"], :name => "index_trips_on_weather_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20130730205812) do
     t.string   "forecast"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "trip_id"
   end
 
 end
