@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
 
-before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   def index
     @trip = Trip.new
@@ -8,9 +8,6 @@ before_filter :authenticate_user!, :except => [:index, :show]
   end
 
   def create
-<<<<<<< HEAD
-    @trip.user = current_user
-=======
     @trip = Trip.new(params[:trip])
     if @trip.save
       # Call weather API
@@ -30,7 +27,6 @@ before_filter :authenticate_user!, :except => [:index, :show]
 
   def show
     @trip = Trip.find(params[:id])
->>>>>>> trip
   end
 
 
