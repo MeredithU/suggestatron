@@ -1,8 +1,8 @@
 class Mapping < ActiveRecord::Base
 
-  attr_accessible :location
+  attr_accessible :location, :trip_id
 
-  belongs_to :trips
+  belongs_to :trip
 
   acts_as_gmappable
 

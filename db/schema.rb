@@ -11,33 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730224933) do
+ActiveRecord::Schema.define(:version => 20130731000807) do
 
   create_table "deals", :force => true do |t|
     t.string   "localdeal"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "trip_id"
   end
 
   create_table "mappings", :force => true do |t|
     t.string   "location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "trip_id"
   end
 
   create_table "trips", :force => true do |t|
     t.string   "startzipcode"
     t.string   "endzipcode"
-    t.integer  "weather_id"
-    t.integer  "deal_id"
-    t.integer  "mapping_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
-
-  add_index "trips", ["deal_id"], :name => "index_trips_on_deal_id"
-  add_index "trips", ["mapping_id"], :name => "index_trips_on_mapping_id"
-  add_index "trips", ["weather_id"], :name => "index_trips_on_weather_id"
 
   create_table "weathers", :force => true do |t|
     t.string   "temperature"
