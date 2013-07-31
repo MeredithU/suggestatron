@@ -2,26 +2,14 @@
 <%= gmaps4rails(@json) %>
 
 
-<h2>Temperature</h2>
-
-<%= @weather.temperature %>
-
 <h2>Forecast</h2>
+<body><%= @weather.temperature %>
+  &  <%= @weather.forecast %></body>
 
-<%= @weather.forecast %>
 
 
-
-<h2>Deal</h2>
-
-<p>Deal Title</p>
-<%= @deal.dealtitle %>
-
-<p>Deal Name</p>
-<%= @deal.dealname %>
-
-<p>Deal Address</p>
-<%= @deal.dealaddress %>
-
-<p>Deal City</p>
+<h2>Local Deal</h2>
+<%= @deal.dealtitle %><br />
+<%= @deal.dealname %><br />
+<%= @deal.dealaddress %><br/ >
 <%= @deal.dealcity %>
