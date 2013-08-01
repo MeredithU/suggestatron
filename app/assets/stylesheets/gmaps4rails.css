@@ -14,7 +14,7 @@
   height: 400px;
 }
 
-.gmaps4rails_map img { max-width: none; }
+.map_container img { max-width: none; }
 
 .bing_map {
    position: absolute;
