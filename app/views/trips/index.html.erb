@@ -1,8 +1,16 @@
 <div class = "homepage" >
+
+  <%= gmaps({
+       "direction"   => { "data" => { "from" => "Paris, france", "to" => "Toulon, france" } }
+            })
+    %>
+
   <div class="jumbotron">
 
       <h2>Enter your zip codes so we can suggest...</h2>
 
     <%= render "form" %>
+
+
   </div>
 </div>

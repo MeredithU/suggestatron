@@ -19,8 +19,8 @@ class TripsController < ApplicationController
       @deal.get_deal_data
 
       # Call Google Maps API
-      @mapping = @trip.create_mapping
-      @json = @mapping.to_gmaps4rails
+      #@mapping = @trip.create_mapping
+      #@json = @mapping.to_gmaps4rails
 
       flash[:notice] = "Trip has been created."
       render :action => "show"

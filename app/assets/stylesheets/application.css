@@ -12,11 +12,11 @@
  *= require_tree .
  */
 
-body {
+/*body {
   background:url('/assets/open_road_large.jpg');
   background-repeat:no-repeat;
   background-size:cover;
-}
+}*/
 
 /* Styling Typography */
 

@@ -5,16 +5,16 @@
 <head>
   <title>Suggestatron</title>
 
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag 'gmaps4rails' %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
 
   <!-- Google Web Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -39,10 +39,12 @@
       <li><a href="#">Link</a></li>
     <li><a href="#">Link</a></li>
   </ul>-->
-</div>
+  </div>
+
+
 
   <%= yield %>
-  <%= yield :scripts %>
+  <%= yield :script %>
 
 
 </body>
