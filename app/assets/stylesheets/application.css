@@ -12,7 +12,9 @@
  *= require_tree .
  */
 
-body {
+body {background-color:#B0E0E6;}
+
+.homepage {
   background:url('/assets/open_road_large.jpg');
   background-repeat:no-repeat;
   background-size:cover;
@@ -29,8 +31,13 @@ body {
 }
 
 .homepage h2 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 200;
+}
+
+.forecast h2 {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 
@@ -47,7 +54,7 @@ body {
 /* Zip Code Form on Home Page */
 
 .homepage .jumbotron {
-  width: 400px;
+  width: 450px;
   float: right;
   margin-right: 100px;
   opacity: .85;

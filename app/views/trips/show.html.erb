@@ -1,16 +1,24 @@
+<div class = "forecast" >
+  <div class="row">
+    <div class="col-lg-8">
+     <%= gmaps4rails(@json) %>
+    </div>
 
-<%= gmaps4rails(@json) %>
+    <div class="col-lg-4">
 
+      <h2>Forecast</h2>
+      <body><%= @weather.temperature %>
+      & <%= @weather.forecast %></body>
 
-<h2>Forecast</h2>
-<body><%= @weather.temperature %>
-  &  <%= @weather.forecast %></body>
+      <h2> What is your excuse for taking a road trip? </h2>
+      <td><%= @trip.excuse %></td>
 
-<h2> What is your excuse for taking a road trip? </h2>
-<td><%= @trip.excuse %></td>
+      <h2>Local Deal</h2>
+      <%= @deal.dealtitle %><br />
+      <%= @deal.dealname %><br />
+      <%= @deal.dealaddress %>
+      <%= @deal.dealcity %>
+    </div>
+  </div>
+</div>
 
-<h2>Local Deal</h2>
-<%= @deal.dealtitle %><br />
-<%= @deal.dealname %><br />
-<%= @deal.dealaddress %>
-<%= @deal.dealcity %>
