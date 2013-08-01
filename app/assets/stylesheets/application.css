@@ -11,3 +11,76 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background:url('/assets/open_road_large.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+/* Styling Typography */
+
+.homepage h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Raleway', sans-serif;
+}
+
+.homepage h1 {
+  font-size: 72px;
+}
+
+.homepage h2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+
+/* Navbar */
+
+.navbar .navbar-brand {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #FFF;
+}
+
+
+/* Zip Code Form on Home Page */
+
+.homepage .jumbotron {
+  width: 400px;
+  float: right;
+  margin-right: 100px;
+  opacity: .85;
+}
+
+.homepage .jumbotron h2 {
+  width: 300px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+.homepage .jumbotron p {
+  font-size: 18px;
+}
+
+
+
+/* Zip Code Form */
+
+.homepage .form p {
+  font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,10 @@ class Mapping < ActiveRecord::Base
   acts_as_gmappable
 
   def gmaps4rails_address
-    self.location = "#{trip.startzipcode}, #{trip.endzipcode}"
+    "#{trip.endzipcode}"
+  end
+
+  def gmaps4rails_address
+    "#{trip.startzipcode}"
   end
 end
