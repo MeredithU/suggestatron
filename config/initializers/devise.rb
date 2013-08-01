@@ -129,7 +129,7 @@ Devise.setup do |config|
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
-  # :none            = No lock strategy. You should handle locking by yourself.
+  # :none = No lock strategy. You should handle locking by yourself.
   # config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
@@ -137,9 +137,9 @@ Devise.setup do |config|
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
-  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
-  # :both  = Enables both strategies
-  # :none  = No unlock strategy. You should handle unlocking by yourself.
+  # :time = Re-enables login after a certain amount of time (see :unlock_in below)
+  # :both = Enables both strategies
+  # :none = No unlock strategy. You should handle unlocking by yourself.
   # config.unlock_strategy = :both
 
   # Number of authentication tries before locking an account if lock_strategy
@@ -175,7 +175,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -210,7 +210,7 @@ Devise.setup do |config|
   # change the failure app, you can configure them inside the config.warden block.
   #
   # config.warden do |manager|
-  #   manager.intercept_401 = false
-  #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
+  # manager.intercept_401 = false
+  # manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
 end

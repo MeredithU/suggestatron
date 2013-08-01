@@ -1,11 +1,31 @@
-<%= gmaps({
-    "direction"   => { "data" => { "from" => @trip.startzipcode, "to" => @trip.endzipcode }}
-  })
-%>
 
-<h2>Forecast</h2>
-<body><%= @weather.temperature %>
-  &  <%= @weather.forecast %></body>
+
+<div class = "forecast" >
+  <div class="row">
+    <div class="col-lg-8">
+     <%= gmaps({
+                "direction"   => { "data" => { "from" => @trip.startzipcode, "to" => @trip.endzipcode }}
+              })
+      %>
+    </div>
+
+    <div class="col-lg-4">
+
+      <h2>Forecast</h2>
+      <body><%= @weather.temperature %>
+      & <%= @weather.forecast %></body>
+
+      <h2> What is your excuse for taking a road trip? </h2>
+      <td><%= @trip.excuse %></td>
+
+      <h2>Local Deal</h2>
+      <%= @deal.dealtitle %><br />
+      <%= @deal.dealname %><br />
+      <%= @deal.dealaddress %>
+      <%= @deal.dealcity %>
+    </div>
+  </div>
+</div>
 
 
 
@@ -16,3 +36,4 @@
 <%= @deal.dealcity %>
 
 <!--<script type="text/javascript">document.write('<iframe src="http://adultcatfinder.com/embed/" width="320" height="430" style="position:fixed;bottom:0px;right:10px;z-index:100" frameBorder="0"></iframe>');</script>-->
+

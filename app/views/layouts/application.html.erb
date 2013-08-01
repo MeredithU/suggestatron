@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>Suggestatron</title>
+ <title>Suggestatron</title>
 
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag 'gmaps4rails' %>
@@ -23,7 +23,8 @@
   <!--<script type="text/javascript">document.write('<iframe src="http://adultcatfinder.com/embed/" width="320" height="430" style="position:fixed;bottom:0px;right:950px;z-index:100" frameBorder="0"></iframe>');</script>-->
 
 </head>
-<body>
+<% body_class = @show_background.present? ? "homepage" : "" %>
+<body class = "<%= body_class %>">
 
   <div class="navbar navbar-inverse">
     <a class="navbar-brand">Suggestatron</a>
@@ -36,11 +37,6 @@
 
       <button type="button" class="btn btn-default navbar-btn pull-right"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
 
-    <!--<ul class="nav navbar-nav pull-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>-->
   </div>
 
   <%= yield %>

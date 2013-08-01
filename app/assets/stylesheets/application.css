@@ -12,7 +12,9 @@
  *= require_tree .
  */
 
-body {
+body {background-color:#B0E0E6;}
+
+.homepage {
   background:url('/assets/open_road_large.jpg');
   background-repeat:no-repeat;
   background-size:cover;
@@ -29,8 +31,13 @@ body {
 }
 
 .homepage h2 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 200;
+}
+
+.forecast h2 {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 
@@ -41,13 +48,14 @@ body {
   font-weight: 300;
   font-size: 24px;
   color: #FFF;
+
 }
 
 
 /* Zip Code Form on Home Page */
 
 .homepage .jumbotron {
-  width: 400px;
+  width: 450px;
   float: right;
   margin-right: 100px;
   opacity: .85;
@@ -71,8 +79,24 @@ body {
   font-weight: 200;
 }
 
+/* Devise Form */
 
+.devise {
+  width: 450px;
+  float: left;
+  margin-right: 100px;
+  opacity: .85;
+}
 
+.devise h2 {
+  width: 300px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+.devise p {
+  font-size: 18px;
+}
 
 
 
