@@ -2,5 +2,7 @@
 
 Suggestatron!
 
-Takes user entered zip codes and generates suggestions taken from three different apis
+Takes user entered zip codes and generates suggestions taken from three different apis as well as a random excuse for taking a roadtrip.
+
+Illustrates the implementation of multiple apis, the Devise gem, nested resources, and associations.
 

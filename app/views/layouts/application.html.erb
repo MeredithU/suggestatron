@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>Suggestatron</title>
+ <title>Suggestatron</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
@@ -34,13 +34,14 @@
       <% end %>
 
       <button type="button" class="btn btn-default navbar-btn pull-right"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
-
-    <!--<ul class="nav navbar-nav pull-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>-->
 </div>
+
+  <% flash.each do |key, value| %>
+  <div class='flash' id='<%= key %>'>
+    <%= value %>
+  </div>
+  <% end %>
+
 
   <%= yield %>
   <%= yield :scripts %>

@@ -48,6 +48,7 @@ body {background-color:#B0E0E6;}
   font-weight: 300;
   font-size: 24px;
   color: #FFF;
+
 }
 
 
@@ -78,8 +79,24 @@ body {background-color:#B0E0E6;}
   font-weight: 200;
 }
 
+/* Devise Form */
 
+.devise {
+  width: 450px;
+  float: left;
+  margin-right: 100px;
+  opacity: .85;
+}
 
+.devise h2 {
+  width: 300px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+.devise p {
+  font-size: 18px;
+}
 
 
 
